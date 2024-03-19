@@ -1,2 +1,5 @@
 # Never upload env file on any open-source platform it contains private data
-.env*
+.env
+.pytest_cache
+__pycache__
+__pycache__
