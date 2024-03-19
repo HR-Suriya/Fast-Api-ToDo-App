@@ -3,3 +3,4 @@
 
 # Refusing To Send some files to enhance visual experience on github which are made automatically
 __pycache__
+__pycache__/
