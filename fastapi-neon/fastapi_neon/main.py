@@ -1,4 +1,5 @@
-# main.py
+# fastapi-neon/fastapi_neon/settings.py
+
 from contextlib import asynccontextmanager
 from typing import Union, Optional, Annotated
 from fastapi_neon import settings

@@ -1,1 +1,5 @@
-.env
+# Never upload env file on any open-source platform it contains private data
+.env*
+
+# Refusing To Send some files to enhance visual experience on github which are made automatically
+__pycache__
