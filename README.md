@@ -77,7 +77,7 @@ If you have a account sign in through that account or make a new account
   - repeat the process but this time paste it in **TEST_DATABASE_URL** name in .en
   v file as shown in env_backup
 
-### Checking If File Is Working Correctly
+## Checking If File Is Working Correctly
 
 - To make sure file is running accurately we do **pytest**.
    To run pytest run command:
@@ -85,17 +85,16 @@ If you have a account sign in through that account or make a new account
   - It will run pytest where all should be passed and none should fail
 
 - To view It Online we will run command:
-  > poetry run uvicorn fastapi_neon.main:app --host 0.0.0.0 --port 8000
+  > poetry run uvicorn fastapi_neon.main:app --host localhost --port 8000
   - Then You can visit on file through links:
 
 ```markdown
 
-    http://0.0.0.0:8000/
+    http://localhost:8000/
     
-    http://0.0.0.0:8000/docs
+    http://localhost:8000/docs
 
-    http://0.0.0.0:8000/openapi.json
+    http://localhost:8000/openapi.json
 
-    Note: If these links are not working replace http://0.0.0.0:8000 by localhost:8000
 
 ```
