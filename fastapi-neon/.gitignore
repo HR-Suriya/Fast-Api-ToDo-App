@@ -3,22 +3,3 @@
 .env
 
 .pytest_cache
-
-/__pycache__
-
-/__pycache__
-
-.pytest_cache
-
-.gitignore
-
-__init__.cpython-312.pyc
-test_main.cpython-312-pytest-8.1.1.pyc
-__init__.cpython-312.pyc
-main.cpython-312.pyc
-settings.cpython-312.pyc
-pytest_cache
-lastfailed
-nodeids
-stepwise
-v/cache
