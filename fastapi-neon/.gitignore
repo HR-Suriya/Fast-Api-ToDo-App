@@ -3,5 +3,3 @@
 .env
 
 .pytest_cache
-
-fastapi_neon/__pycache__
