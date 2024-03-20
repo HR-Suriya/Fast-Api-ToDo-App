@@ -1,13 +1,15 @@
 
-# Making A To DO App
+# Making A To DO API WITH FAST API & POETRY
 
 ## Starting Project
 
 First Run The Command
 
-`poetry new fastapi-neon`
+```markdown
+  poetry new fastapi-neon
 
-`cd fastapi-neon`
+  cd fastapi-neon
+```
 
 ## Creating Files And Copying Code
 
@@ -41,7 +43,9 @@ Python is by default installed while creating project
 
 **For installing all other dependencies through poetry run the command:**
 
-`poetry add fastapi sqlmodel pytest httpx "uvicorn[standard]" "psycopg[binary]"`
+```markdown
+  > poetry add fastapi sqlmodel pytest httpx "uvicorn[standard]" "psycopg[binary]"
+```
 
 ## Making A Connection Between Local File And Database
 
@@ -61,11 +65,22 @@ If you have a account sign in through that account or make a new account
 - Now you have database ready you just need to make connection from local device for which you must have neon_cli
   - To install neon cli through npm will require Node JS. Download & Install Node JS from [HERE](https://nodejs.org/en)
   - This npm command will install neon cli globally to use on anywhere in your device:
-    > npm i -g neonctl
+
+    ```markdown
+      > npm i -g neonctl
+    ```
+
   - After Neon Cli is installed authorize yourself by command
-    > neonctl auth
+
+    ```markdown
+     > neonctl auth
+    ```
+
   - If you want to you can make sure which account you connected to through command
-    > neonctl me
+
+    ```markdown
+      > neonctl me
+    ```
 
 - Now go back to dashboard and see there is another section of Connection Details
   - Make sure you have selected **main** branch there will be option of **connection string**.
@@ -81,20 +96,25 @@ If you have a account sign in through that account or make a new account
 
 - To make sure file is running accurately we do **pytest**.
    To run pytest run command:
-     > poetry run pytest
+
+    ```markdown
+      > poetry run pytest
+    ```
+
   - It will run pytest where all should be passed and none should fail
 
 - To view It Online we will run command:
-  > poetry run uvicorn fastapi_neon.main:app --host localhost --port 8000
+  
+  ```markdown
+    > poetry run uvicorn fastapi_neon.main:app --host localhost --port 8000
+  ```
+
   - Then You can visit on file through links:
 
 ```markdown
-
-    http://localhost:8000/
+  http://localhost:8000/
     
-    http://localhost:8000/docs
+  http://localhost:8000/docs
 
-    http://localhost:8000/openapi.json
-
-
+  http://localhost:8000/openapi.json
 ```
