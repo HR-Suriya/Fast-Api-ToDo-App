@@ -12,13 +12,12 @@ from fastapi_neon import settings
 # https://realpython.com/python-assert-statement/
 # https://understandingdata.com/posts/list-of-python-assert-statements-for-unit-tests/
 
-# postgresql://ziaukhan:oSUqbdELz91i@ep-polished-waterfall-a50jz332.us-east-2.aws.neon.tech/neondb?sslmode=require
 
 def test_read_main():
     client = TestClient(app=app)
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"Made By": "Hassan Raza"}
+    assert response.json() == {"Hi": "API"}
 
 def test_write_main():
 
@@ -39,16 +38,25 @@ def test_write_main():
 
         client = TestClient(app=app)
 
-        todo_content = "buy bread"
+        todo_title = "buy"
+        todo_body = "buy bread"
+        todo_author = "None"
 
         response = client.post("/todos/",
-            json={"content": todo_content}
+            json={
+               "body": todo_body,
+               "title": todo_title,
+               "author":todo_author
+
+            }
         )
 
         data = response.json()
 
         assert response.status_code == 200
-        assert data["content"] == todo_content
+        assert data["body"] == todo_body
+        assert data["title"] == todo_title
+        assert data["author"] == todo_author
 
 def test_read_list_main():
 
@@ -70,3 +78,5 @@ def test_read_list_main():
 
         response = client.get("/todos/")
         assert response.status_code == 200
+        assert isinstance(response.json(), list)
+
